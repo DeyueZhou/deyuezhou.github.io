@@ -4,11 +4,11 @@
   
   
   <entry>
-    <title>Building a personal site with Hexo and GitHub Pages on Mac</title>
-    <link href="/Building-a-personal-site-with-Hexo-and-GitHub-Pages-on-Mac/"/>
-    <url>/Building-a-personal-site-with-Hexo-and-GitHub-Pages-on-Mac/</url>
+    <title>Build Personal Website with Hexo and GitHub Pages on Mac</title>
+    <link href="/Build-Personal-Websiite-with-Hexo-and-GitHub-Pages-on-Mac/"/>
+    <url>/Build-Personal-Websiite-with-Hexo-and-GitHub-Pages-on-Mac/</url>
     
-    <content type="html"><![CDATA[<p><strong>A challenge, no doubt.</strong></p><blockquote><p>In this post, a brief overview of building a personal blog is recorded in case anyone who is also interested in the same as me, or in pursuit of efficient regeneration provided with device change or data migration for myself.</p></blockquote><h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>It has been long time since I want to have a particular space to record my life, and until now I’ve finally started creating my personal website here.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>A challenge, no doubt.</strong></p><blockquote><p>In this post:  </p><ul><li><p>A brief overview of how to build a personal blog</p></li><li><p>Offical documentation links for reference</p></li></ul></blockquote><h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>It has been long time since I want to have a particular space to record my life, and until now I’ve finally started creating my personal website here. </p><p>As the first post, I am writing this article just in case anyone who is also interested in owning a personal website but haven’t been prepared yet. On the other hand, it will be an importent reference for myself to re-create the environment efficiently when I change the Mac or migrate data in the future.</p>]]></content>
     
     
     <categories>
