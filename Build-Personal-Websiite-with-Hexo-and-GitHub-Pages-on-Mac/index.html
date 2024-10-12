@@ -28,7 +28,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://deyuezhou.github.io/img/1_index.png">
 <meta property="article:published_time" content="2024-10-09T00:38:22.000Z">
-<meta property="article:modified_time" content="2024-10-12T20:03:58.858Z">
+<meta property="article:modified_time" content="2024-10-12T21:27:22.484Z">
 <meta property="article:author" content="Deyue Zhou">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Markdown">
@@ -232,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          57 words
+          155 words
         
       </span>
     
@@ -243,7 +243,7 @@
         
         
         
-          1 mins
+          2 mins
         
       </span>
     
@@ -298,37 +298,56 @@
 <h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>It has been long time since I would like to own a particular space to record my life, and until now I’ve finally started creating my personal website here. Among a varitey of schemes, I chose <strong>Hexo + Github Pages</strong>, which is friendly to noob like me.  </p>
 <p><a target="_blank" rel="noopener" href="https://hexo.io/"><strong>Hexo</strong></a> is a fast, simple &amp; powerful blog framework. Simply write post in Markdown and Hexo generates static files deployed to Github Pages.  </p>
 <p>As the first post, I am writing this article just in case anyone who is also interested in having a personal website but hasn’t been prepared yet. On the other hand, it will be an importent reference for myself to re-create the environment efficiently when I change the Mac or migrate data in the future.  </p>
-<h3 id="Environment-setup"><a href="#Environment-setup" class="headerlink" title="Environment setup"></a>Environment setup</h3><ol>
-<li>Install Homebrew</li>
-</ol>
+<h3 id="Environment-setup"><a href="#Environment-setup" class="headerlink" title="Environment setup"></a>Environment setup</h3><p>Install Homebrew  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/bin/bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubsuercontent.com/Homebrew/install/HEAD/install.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure>
 
-<ol start="2">
-<li>Install Node.js</li>
-</ol>
+<p>Install Node.js  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install node<br></code></pre></td></tr></table></figure>
 
-<ol start="3">
-<li>Install Git</li>
-</ol>
+<p>Install Git  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install git<br></code></pre></td></tr></table></figure>
 
-<ol start="4">
-<li>Install Hexo</li>
-</ol>
+<p>Install Hexo  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
 
 
 
 <h3 id="Initialize-Hexo"><a href="#Initialize-Hexo" class="headerlink" title="Initialize Hexo"></a>Initialize Hexo</h3><p>Once Hexo is installed, create a new folder for Hexo, and keep in mind the <code>&lt;path&gt;</code>.  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> &lt;path&gt;	<span class="hljs-comment"># enter target folder</span><br>hexo init <span class="hljs-comment"># initialize Hexo to generate essential files</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> &lt;path&gt;	<span class="hljs-comment"># enter target folder</span><br>hexo init <span class="hljs-comment"># initialize Hexo</span><br></code></pre></td></tr></table></figure>
+
+<p>We can see the “site config” file <strong>_config.yml</strong> in Hexo root dict, personalize the top contents when necessary.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Site</span><br><span class="hljs-attr">title:</span> <br><span class="hljs-attr">subtitle:</span> <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-attr">description:</span> <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-attr">keywords:</span><br><span class="hljs-attr">author:</span> <br><span class="hljs-attr">language:</span> <span class="hljs-string">en</span><br><span class="hljs-attr">timezone:</span> <span class="hljs-string">&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>
+
+
 
 <p>Practical commands.  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean	<span class="hljs-comment"># clear the static files and cache</span><br>hexo g	<span class="hljs-comment"># generate static web files locally</span><br>hexo s	<span class="hljs-comment"># start a local sever for preview</span><br>hexo d	<span class="hljs-comment"># deploy after generation finish</span><br></code></pre></td></tr></table></figure>
 
 
 
-<h3 id="Deploy-Github-Pages"><a href="#Deploy-Github-Pages" class="headerlink" title="Deploy Github Pages"></a>Deploy Github Pages</h3>
+<h3 id="Deploy-Github-Pages"><a href="#Deploy-Github-Pages" class="headerlink" title="Deploy Github Pages"></a>Deploy Github Pages</h3><p>Create a repo in Github named as <strong>username.github.io</strong>.  </p>
+<p>Add SHH key to Github account.  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --glabal user.name <span class="hljs-string">&quot;username&quot;</span><br>git config --global user.email <span class="hljs-string">&quot;example@example.com&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>Then generate SHH key.  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;example@example.com&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>Find a <strong>id_ras.pub</strong> file under dict <strong>&#x2F;User&#x2F;.ssh&#x2F;id_rsa.pub</strong>.  </p>
+<p>Open <strong>id_ras.pub</strong> with TextEdit, and copy&#x2F;paste to Github account setting.</p>
+<p>Check if successful.  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -T git@github.com<br></code></pre></td></tr></table></figure>
+
+<p>Install deployer plugin.  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
+
+<p>Open <strong>_config.yml</strong> with TextEdit and scroll down to the bottom, modify as below.  </p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Deployment</span><br><span class="hljs-comment">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/username/username.github.io.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br></code></pre></td></tr></table></figure>
+
+<p>Let’s do it again.  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo g --d<br></code></pre></td></tr></table></figure>
+
+<p><font color='#CE2029'><strong>Now we can login our personal website</strong></font> with <strong>username.github.io</strong> :tada:</p>
+
                 
               </div>
             
