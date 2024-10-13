@@ -19,16 +19,16 @@
   <meta name="author" content="Deyue Zhou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Knock on new home’s door.  In this post:    Outline of how to build a personal blog  Useful links for reference    IntroIt has been long time since I would like to own a particular space to record my">
+    <meta name="description" content="Knock on new home’s door.  In this post:    Outline of how to build a personal blog  Useful links for reference    IntroductionIt has been long time since I would like to own a particular space to rec">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Build Personal Website with Hexo and GitHub Pages on Mac">
 <meta property="og:url" content="http://deyuezhou.github.io/Build-Personal-Websiite-with-Hexo-and-GitHub-Pages-on-Mac/index.html">
 <meta property="og:site_name" content="Deyue&#39;s blog">
-<meta property="og:description" content="Knock on new home’s door.  In this post:    Outline of how to build a personal blog  Useful links for reference    IntroIt has been long time since I would like to own a particular space to record my">
+<meta property="og:description" content="Knock on new home’s door.  In this post:    Outline of how to build a personal blog  Useful links for reference    IntroductionIt has been long time since I would like to own a particular space to rec">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://deyuezhou.github.io/img/1_index.png">
 <meta property="article:published_time" content="2024-10-12T22:00:00.000Z">
-<meta property="article:modified_time" content="2024-10-12T23:34:45.888Z">
+<meta property="article:modified_time" content="2024-10-13T00:53:01.002Z">
 <meta property="article:author" content="Deyue Zhou">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Markdown">
@@ -46,8 +46,6 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
@@ -77,6 +75,7 @@
 <link rel="stylesheet" href="/css/iconfont_mail/iconfont.css">
 <link rel="stylesheet" href="/css/iconfont_orcid/iconfont.css">
 <link rel="stylesheet" href="/css/iconfont_linkedin/iconfont.css">
+<link rel="stylesheet" href="/css/macpanel.css">
 
 
 
@@ -234,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          158 words
+          202 words
         
       </span>
     
@@ -297,81 +296,86 @@
 </li>
 </ul>
 </blockquote>
-<h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>It has been long time since I would like to own a particular space to record my life, and until now I’ve finally started creating my personal website here. Among a varitey of schemes, I opt to <strong>Hexo + GitHub Pages</strong>, which is friendly to noob like me.  </p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>It has been long time since I would like to own a particular space to record my life, and until now I’ve finally started creating my personal website here. Among a varitey of schemes, I opt to <strong>Hexo + GitHub Pages</strong>, which is friendly to noob like me.  </p>
 <p><a target="_blank" rel="noopener" href="https://hexo.io/"><strong>Hexo</strong></a> is a fast, simple &amp; powerful blog framework. Simply write post in Markdown and Hexo generates static files deployed to GitHub Pages.  </p>
 <p>As the first post, I am writing this article just in case anyone who is also interested in having a personal website but hasn’t been prepared yet. On the other hand, it will be an importent reference for myself to re-create the environment efficiently when I change the Mac or migrate data in the future.  </p>
 <h3 id="Environment-setup"><a href="#Environment-setup" class="headerlink" title="Environment setup"></a>Environment setup</h3><p>Install Homebrew  </p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/bin/bash <span class="token parameter variable">-c</span> <span class="token string">"<span class="token variable"><span class="token variable">$(</span><span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://raw.githubsuercontent.com/Homebrew/install/HEAD/install.sh<span class="token variable">)</span></span>"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/bin/bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubsuercontent.com/Homebrew/install/HEAD/install.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure>
 
 <p>Install Node.js  </p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew <span class="token function">install</span> <span class="token function">node</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install node<br></code></pre></td></tr></table></figure>
 
 <p>Install Git  </p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew <span class="token function">install</span> <span class="token function">git</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install git<br></code></pre></td></tr></table></figure>
 
 <p>Install Hexo  </p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
 
 
 
 <h3 id="Initialize-Hexo"><a href="#Initialize-Hexo" class="headerlink" title="Initialize Hexo"></a>Initialize Hexo</h3><p>Once Hexo is installed, create a new folder for Hexo, and keep in mind the <code>&lt;path&gt;</code>.  </p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> <span class="token operator">&lt;</span>path<span class="token operator">></span>	<span class="token comment"># enter target folder</span>
-hexo init <span class="token comment"># initialize Hexo</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> &lt;path&gt;	<span class="hljs-comment"># enter target folder</span><br>hexo init <span class="hljs-comment"># initialize Hexo</span><br></code></pre></td></tr></table></figure>
 
 <p>We can see essential folders&#x2F;files are generatred. And <strong>_config.yml</strong> is the “site config” file in Hexo root dict, personalize the top contents when required.  </p>
 <p>Here are some basic commands to compile Hexo below.  </p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean	<span class="token comment"># clear the static files and cache</span>
-hexo g	<span class="token comment"># generate static web files locally</span>
-hexo s	<span class="token comment"># start a local sever for preview</span>
-hexo d	<span class="token comment"># deploy after generation finish</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean	<span class="hljs-comment"># clear the static files and cache</span><br>hexo g	<span class="hljs-comment"># generate static web files locally</span><br>hexo s	<span class="hljs-comment"># start a local sever for preview</span><br>hexo d	<span class="hljs-comment"># deploy after generation finish</span><br></code></pre></td></tr></table></figure>
 
 
 
 <h3 id="Deploy-GitHub-Pages"><a href="#Deploy-GitHub-Pages" class="headerlink" title="Deploy GitHub Pages"></a>Deploy GitHub Pages</h3><p>Create a repo in GitHub named as <strong>username.github.io</strong>.  </p>
 <p>Add SHH key to GitHub account.  </p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--glabal</span> user.name <span class="token string">"username"</span>
-<span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"example@example.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --glabal user.name <span class="hljs-string">&quot;username&quot;</span><br>git config --global user.email <span class="hljs-string">&quot;example@example.com&quot;</span><br></code></pre></td></tr></table></figure>
 
 <p>Then generate SHH key.  </p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token parameter variable">-C</span> <span class="token string">"example@example.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;example@example.com&quot;</span><br></code></pre></td></tr></table></figure>
 
 <p>Find a <strong>id_ras.pub</strong> file under dict <strong>&#x2F;User&#x2F;.ssh&#x2F;id_rsa.pub</strong>.  </p>
 <p>Open <strong>id_ras.pub</strong> with TextEdit, and copy&#x2F;paste to Github account setting.</p>
 <p>Check if successful.  </p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ssh</span> <span class="token parameter variable">-T</span> git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -T git@github.com<br></code></pre></td></tr></table></figure>
 
 <p>Install deployer plugin.  </p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
 
 <p>Open <strong>_config.yml</strong> with TextEdit and scroll down to the bottom, modify as below.  </p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Deployment</span>
-<span class="token comment">## Docs: https://hexo.io/docs/one-command-deployment</span>
-<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
-  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
-  <span class="token key atrule">repo</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/username/username.github.io.git
-  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Deployment</span><br><span class="hljs-comment">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/username/username.github.io.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br></code></pre></td></tr></table></figure>
 
 <p>Deploy to GitHub Pages.  </p>
-<figure><div class="code-wrapper"><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean
-hexo g <span class="token parameter variable">--d</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo g --d<br></code></pre></td></tr></table></figure>
 
-<p><strong>Now we can login our personal website tpying username.github.io</strong> <span class="github-emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">&#x1f389;</span>  </p>
+<p><strong>Now we can login our personal website using username.github.io</strong> <span class="github-emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">&#x1f389;</span>  </p>
 <h3 id="Personalize-domain"><a href="#Personalize-domain" class="headerlink" title="Personalize domain"></a>Personalize domain</h3><p>It should be much cooler if we could have a custom domain. On top of <strong>GitHub Pages</strong>, my scheme is <strong>GoDaddy + Cloudflare</strong> - cheap, save and accessible.  </p>
 <p>Here are the brief steps:  </p>
 <p><strong>Step 1: Buy a domian from <a target="_blank" rel="noopener" href="https://www.godaddy.com/en-uk">GoDaddy</a></strong>  </p>
 <p><strong>Step 2: DNS management by <a target="_blank" rel="noopener" href="https://www.cloudflare.com/">Cloudflare</a></strong>  </p>
 <ul>
 <li>Change to Cloudflare-branded nameservers  </li>
-<li>Add DNS records with the <a target="_blank" rel="noopener" href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">IP adresses for GitHub Pages</a></li>
+<li>Add DNS records with the <a target="_blank" rel="noopener" href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site"><strong>IP adresses for GitHub Pages</strong></a></li>
 </ul>
 <p><strong>Step 3: GitHub custom domain</strong>  </p>
 <p><strong>Step 4: HTTPS &amp; SSL encryption</strong>  </p>
 <ul>
-<li>Page rules set as “Always Use HTTPS”  </li>
+<li>Page Rules set as “Always Use HTTPS”  </li>
 <li>SSL&#x2F;TLS encryption set as “Full”  </li>
 <li>Tick “Always Use HTTPS” under Edge Certificates</li>
 </ul>
-<p><strong>Now we can login our personal website typing custom domain</strong> <span class="github-emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">&#x1f389;</span> <span class="github-emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">&#x1f389;</span></p>
+<p><strong>Now we can login our personal website using custom domain</strong> <span class="github-emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">&#x1f389;</span> <span class="github-emoji" alias="tada" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">&#x1f389;</span>  </p>
+<h3 id="Customize-Hexo-theme"><a href="#Customize-Hexo-theme" class="headerlink" title="Customize Hexo theme"></a>Customize Hexo theme</h3><p>Select a <a target="_blank" rel="noopener" href="https://hexo.io/themes/"><strong>Hexo theme</strong></a>, and make our blog more pretty.</p>
+<p>I prefer <a target="_blank" rel="noopener" href="https://hexo.io/themes/"><strong>Fluid</strong></a>, an elegant Material-Design theme, particularly for writing posts. If you favour the other theme, the configuration method should be similar.</p>
+<p>Download Fluid.  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure>
+
+<p>Then <strong>_config.fluid.yml</strong> in root dict is created for custom.  </p>
+<p>Modify <strong>_config.yml</strong> in root dict as follows to start theme.  </p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Extensions</span><br><span class="hljs-comment">## Plugins: https://hexo.io/plugins/</span><br><span class="hljs-comment">## Themes: https://hexo.io/themes/</span><br><span class="hljs-attr">theme:</span> <span class="hljs-string">fluid</span><br></code></pre></td></tr></table></figure>
+
+<p>Creating the About Page.  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new page about<br></code></pre></td></tr></table></figure>
+
+<p>For more configuration, please refer to <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/en/start/"><strong>Hexo Fluid Docs</strong></a>.  </p>
+<br/>
+
+<p><strong>Keep on carving!</strong></p>
 
                 
               </div>
@@ -659,8 +663,6 @@ hexo g <span class="token parameter variable">--d</span><span aria-hidden="true"
   });
 </script>
 
-
-  <script  src="https://lib.baomitu.com/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
 
