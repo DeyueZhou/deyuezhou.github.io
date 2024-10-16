@@ -871,7 +871,7 @@ i.iconfont {
     --post-link-color: #C0C9CC;
     --link-hover-color: #C0C9CC;
     --link-hover-bg-color: #364151;
-    --line-color: #3C3630;
+    --line-color: #D7D4CC;
     --navbar-bg-color: #3C3630;
     --navbar-text-color: #EBEBE5;
     --subtitle-color: #EBEBE5;
@@ -882,7 +882,7 @@ i.iconfont {
     --highlight-bg-color: #282c34;
     --inlinecode-bg-color: rgba(99,110,123,0.4);
     --fold-title-color: #D7D4CC;
-    --fold-border-color: #3C3630;
+    --fold-border-color: #D7D4CC;
   }
   :root:not([data-user-color-scheme]) img {
     -webkit-filter: brightness(0.9);
@@ -909,7 +909,7 @@ i.iconfont {
     --post-link-color: #C0C9CC;
     --link-hover-color: #C0C9CC;
     --link-hover-bg-color: #364151;
-    --line-color: #3C3630;
+    --line-color: #D7D4CC;
     --navbar-bg-color: #3C3630;
     --navbar-text-color: #EBEBE5;
     --subtitle-color: #EBEBE5;
@@ -920,7 +920,7 @@ i.iconfont {
     --highlight-bg-color: #282c34;
     --inlinecode-bg-color: rgba(99,110,123,0.4);
     --fold-title-color: #D7D4CC;
-    --fold-border-color: #3C3630;
+    --fold-border-color: #D7D4CC;
   }
   [data-user-color-scheme="dark"] img {
     -webkit-filter: brightness(0.9);
