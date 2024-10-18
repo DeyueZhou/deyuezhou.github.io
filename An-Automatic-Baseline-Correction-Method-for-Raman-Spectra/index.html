@@ -19,25 +19,25 @@
   <meta name="author" content="Deyue Zhou">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Knock on new home&#39;s door.">
+    <meta name="description" content="With a few lines of code, we can easily batch subtract spectrum background.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Build Personal Website with Hexo and GitHub Pages on Mac">
-<meta property="og:url" content="http://zhoudeyue.com/Build-Personal-Websiite-with-Hexo-and-GitHub-Pages-on-Mac/index.html">
+<meta property="og:title" content="An Automatic Baseline Correction Method for Raman Spectra">
+<meta property="og:url" content="http://zhoudeyue.com/An-Automatic-Baseline-Correction-Method-for-Raman-Spectra/index.html">
 <meta property="og:site_name" content="Deyue&#39;s blog">
-<meta property="og:description" content="Knock on new home&#39;s door.">
+<meta property="og:description" content="With a few lines of code, we can easily batch subtract spectrum background.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://zhoudeyue.com/img/post1/index.png">
-<meta property="article:published_time" content="2024-10-12T23:00:00.000Z">
-<meta property="article:modified_time" content="2024-10-16T15:49:58.847Z">
+<meta property="og:image" content="http://zhoudeyue.com/img/post3/index.png">
+<meta property="article:published_time" content="2024-10-17T23:00:00.000Z">
+<meta property="article:modified_time" content="2024-10-18T15:18:05.607Z">
 <meta property="article:author" content="Deyue Zhou">
-<meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Spectroscopy">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://zhoudeyue.com/img/post1/index.png">
+<meta name="twitter:image" content="http://zhoudeyue.com/img/post3/index.png">
   
   
   
-  <title>Build Personal Website with Hexo and GitHub Pages on Mac - Deyue&#39;s blog</title>
+  <title>An Automatic Baseline Correction Method for Raman Spectra - Deyue&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -210,7 +210,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Build Personal Website with Hexo and GitHub Pages on Mac"></span>
+            <span id="subtitle" data-typed-text="An Automatic Baseline Correction Method for Raman Spectra"></span>
           
         </div>
 
@@ -221,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-13 00:00" pubdate>
-          October 13, 2024 am
+        <time datetime="2024-10-18 00:00" pubdate>
+          October 18, 2024 am
         </time>
       </span>
     
@@ -233,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          632 words
+          560 words
         
       </span>
     
@@ -244,7 +244,7 @@
         
         
         
-          6 mins
+          5 mins
         
       </span>
     
@@ -281,125 +281,92 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Build Personal Website with Hexo and GitHub Pages on Mac</h1>
+            <h1 id="seo-header">An Automatic Baseline Correction Method for Raman Spectra</h1>
             
             
               <div class="markdown-body">
                 
-                <p><strong><em>Knock on new home's door.</em></strong></p>
+                <p><strong><em>With a few lines of code, we can easily batch subtract
+spectrum background.</em></strong></p>
 <span id="more"></span>
 <blockquote>
 <p>In this post:</p>
 <ul>
-<li><p>How-tos for building a personal blog</p></li>
-<li><p>Useful links for reference</p></li>
+<li>An algorithm based on asymmetric least squares (ALS) smoothing</li>
+<li>Python code implementation</li>
 </ul>
 </blockquote>
 <p><br/></p>
-<h3 id="introduction">Introduction</h3>
-<p>It has been long time since I would like to own a particular space to
-record my life, and until now I've finally started creating my personal
-website here. Among a varitey of schemes, I opt to <strong>Hexo + GitHub
-Pages</strong>, which is friendly to noob like me.</p>
-<p><a target="_blank" rel="noopener" href="https://hexo.io"><strong>Hexo</strong></a> is a fast, simple
-&amp; powerful blog framework. Simply write post in Markdown and Hexo
-generates static files deployed to GitHub Pages.</p>
-<p>As the first post, I am writing this article just in case anyone who
-is also interested in having a personal website but hasn't been prepared
-yet. On the other hand, it will be an importent reference for myself to
-re-create the environment efficiently when I change the Mac or migrate
-data in the future.</p>
-<h3 id="environment-setup">Environment setup</h3>
-<p>Install Homebrew</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/bin/bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubsuercontent.com/Homebrew/install/HEAD/install.sh)</span>&quot;</span><br></code></pre></td></tr></table></figure>
-<p>Install Node.js</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install node<br></code></pre></td></tr></table></figure>
-<p>Install Git</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install git<br></code></pre></td></tr></table></figure>
-<p>Install Hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure>
-<h3 id="initialize-hexo">Initialize Hexo</h3>
-<p>Once Hexo is installed, create a new folder for Hexo, and keep in
-mind the <code>&lt;path&gt;</code>.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> &lt;path&gt;	<span class="hljs-comment"># enter target folder</span><br>hexo init <span class="hljs-comment"># initialize Hexo</span><br></code></pre></td></tr></table></figure>
-<p>We can see essential folders/files are generatred. And
-**_config.yml** is the "site config" file in Hexo root dict, personalize
-the top contents when required.</p>
-<p>Here are some basic commands to compile Hexo below.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean	<span class="hljs-comment"># clear the static files and cache</span><br>hexo g	<span class="hljs-comment"># generate static web files locally</span><br>hexo s	<span class="hljs-comment"># start a local sever for preview</span><br>hexo d	<span class="hljs-comment"># deploy after generation finish</span><br></code></pre></td></tr></table></figure>
-<h3 id="deploy-github-pages">Deploy GitHub Pages</h3>
-<p>Create a repo in GitHub named as
-<strong>username.github.io</strong>.</p>
-<p>Add SHH key to GitHub account.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --glabal user.name <span class="hljs-string">&quot;username&quot;</span><br>git config --global user.email <span class="hljs-string">&quot;example@example.com&quot;</span><br></code></pre></td></tr></table></figure>
-<p>Then generate SHH key.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;example@example.com&quot;</span><br></code></pre></td></tr></table></figure>
-<p>Find a <strong>id_ras.pub</strong> file under dict
-<strong>/User/.ssh/id_rsa.pub</strong>.</p>
-<p>Open <strong>id_ras.pub</strong> with TextEdit, and copy/paste to
-Github account setting.</p>
-<p>Check if successful.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -T git@github.com<br></code></pre></td></tr></table></figure>
-<p>Install deployer plugin.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
-<p>Open **_config.yml** with TextEdit and scroll down to the bottom,
-modify as below.</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Deployment</span><br><span class="hljs-comment">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/username/username.github.io.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br></code></pre></td></tr></table></figure>
-<p>Deploy to GitHub Pages.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br>hexo g --d<br></code></pre></td></tr></table></figure>
-<p><strong>Now we can login our personal website using
-username.github.io</strong> <span class="github-emoji" data-alias="tada"
-style=""
-data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span></p>
-<h3 id="personalize-domain">Personalize domain</h3>
-<p>It should be much cooler if we could have a custom domain. On top of
-<strong>GitHub Pages</strong>, my scheme is <strong>GoDaddy +
-Cloudflare</strong> - cheap, save and accessible.</p>
-<p>Here are the brief steps:</p>
-<p><strong>Step 1: Buy a domian from <a
-target="_blank" rel="noopener" href="https://www.godaddy.com/en-uk">GoDaddy</a></strong></p>
-<p><strong>Step 2: DNS management by <a
-target="_blank" rel="noopener" href="https://www.cloudflare.com/">Cloudflare</a></strong></p>
-<ul>
-<li>Change to Cloudflare-branded nameservers<br />
-</li>
-<li>Add DNS records with the <a
-target="_blank" rel="noopener" href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site"><strong>IP
-adresses for GitHub Pages</strong></a></li>
-</ul>
-<p><strong>Step 3: GitHub custom domain</strong></p>
-<p><strong>Step 4: HTTPS &amp; SSL encryption</strong></p>
-<ul>
-<li>Page Rules set as "Always Use HTTPS"<br />
-</li>
-<li>SSL/TLS encryption set as "Full"<br />
-</li>
-<li>Tick "Always Use HTTPS" under Edge Certificates</li>
-</ul>
-<p><strong>Now we can login our personal website using custom
-domain</strong> <span class="github-emoji" data-alias="tada" style=""
-data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span>
-<span class="github-emoji" data-alias="tada" style=""
-data-fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png?v8">🎉</span></p>
-<h3 id="customize-hexo-theme">Customize Hexo theme</h3>
-<p>Select a <a target="_blank" rel="noopener" href="https://hexo.io/themes/"><strong>Hexo
-theme</strong></a>, and make our blog more pretty.</p>
-<p>I prefer <a
-target="_blank" rel="noopener" href="https://hexo.io/themes/"><strong>Fluid</strong></a>, an elegant
-Material-Design theme, particularly for writing posts. If you favour the
-other theme, the configuration method should be similar.</p>
-<p>Download Fluid.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure>
-<p>Then **_config.fluid.yml** in root dict is created for custom.</p>
-<p>Modify **_config.yml** in root dict as follows to start theme.</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Extensions</span><br><span class="hljs-comment">## Plugins: https://hexo.io/plugins/</span><br><span class="hljs-comment">## Themes: https://hexo.io/themes/</span><br><span class="hljs-attr">theme:</span> <span class="hljs-string">fluid</span><br></code></pre></td></tr></table></figure>
-<p>Creating the About Page.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new page about<br></code></pre></td></tr></table></figure>
-<p>For more configuration, please refer to <a
-target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/en/start/"><strong>Hexo Fluid
-Docs</strong></a>.</p>
+<h3 id="fluorescence-in-raman-spectroscopy">Fluorescence in Raman
+Spectroscopy</h3>
+<p>The signal in Raman spectroscopy has three components: vibrational
+bands, noise, and fluorescence. Fluorescence occurs when a photon of the
+incoming radiation is absorbed by an orbital electron in a molecule of
+the material, exciting it to a higher energy level. The practical
+consequence of this in Raman spectroscopy is that intense fluorescence
+emissions from a sample can obscure weaker vibrational fingerprints and
+reduce the quality of spectra. Thus, it is necessary to remove the
+baseline drift in spectroscopic analysis.</p>
+<p>Background subtraction is a crucial step in the preprocessing of
+Raman spectra, it can be implemented by either manual or automation
+means in professional plotting software (e.g. Origin). However, these
+approaches are usually subjective, time-consuming and of limited
+reproducibility, and a highly compelling alternative is algorithm-based
+automated signal processing.</p>
+<h3 id="als-baseline-correction">ALS Baseline Correction</h3>
+<p>Asymmetric Least Squares (ALS) is a growing baseline estimation
+method, developed by Eiler<a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a>, that uses an asymmetric
+weighting of deviations to smooth data and estimate a baseline,
+extending ideas presented by Whittaker 80 years ago. This smoother is
+simple and fast, allowing to be programmed in a few lines of code.</p>
+<p>Specially, it refers to the algorithm based on searching a smooth
+line (<span class="math inline">\(z\)</span>) lower than the
+experimental data (<span class="math inline">\(y\)</span>) by penalizing
+the second derivative of the former. Mathematically, it is briefly
+expressed as the following functional:<br />
+<span class="math display">\[
+F=\sum_{i}w_i(y_i-z_i)^2+\lambda\sum_{i}(z_i&#39;&#39;)^2\notag
+\]</span></p>
+<p>where the summation runs over all points of the <em>x</em>-axis,
+<span class="math inline">\(w_i\)</span> is chosen asymmetrically: <span
+class="math inline">\(w_i = p\)</span> if <span
+class="math inline">\(y_i &gt; z_i\)</span> and <span
+class="math inline">\(w_i=1-p\)</span> otherwise, and <span
+class="math inline">\(\lambda\)</span> is the penalty parameter for the
+second derivative.</p>
+<p>In a nutshell, this method can: Quickly correct and ascertain a
+baseline and Retain signal peak information.</p>
+<h3 id="implementation-application">Implementation &amp;
+Application</h3>
+<p>Based on the algorithm, Python <code>Scipy</code> package is called
+to defined the corresponding function, which then can be used for raw
+spectral data ergodic extraction and batch processing.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs Python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">from</span> scipy.sparse <span class="hljs-keyword">import</span> csc_matrix<br><span class="hljs-keyword">from</span> scipy.sparse <span class="hljs-keyword">import</span> spdiags<br><span class="hljs-keyword">from</span> scipy.sparse.linalg <span class="hljs-keyword">import</span> spsolve<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">ALSBaselineCorrection</span>(<span class="hljs-params">y, lam=<span class="hljs-number">1E6</span>, p=<span class="hljs-number">0.001</span>, niter=<span class="hljs-number">30</span></span>):<br>    m = <span class="hljs-built_in">len</span>(y)<br>    w = np.ones(m)<br>    D = csc_matrix(np.diff(np.eye(m), <span class="hljs-number">3</span>))<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(niter):<br>        W = spdiags(w, <span class="hljs-number">0</span>, m, m)<br>        Z = W + lam * D.dot(D.transpose())<br>        z = spsolve(Z, w * y)<br>        w = p * (y &gt; z) + (<span class="hljs-number">1</span> - p) * (y &lt; z)<br>    <span class="hljs-keyword">return</span> z<br></code></pre></td></tr></table></figure>
+<p>Here is an example of my own experimental data. In Surface Enhanced
+Raman Scattering (SERS) sensing of adenine, a purine nucleotide base,
+high fluorescence exhibits due to the presence of graphene oxide in the
+measurement system. As can be seen, after ALS smoothing, the drifting
+baseline is pulled back to zero intensity, and almost all the Raman
+signals are well preserved.</p>
+<p><img src="/img/post3/spectra.png" srcset="/img/loading.gif" lazyload
+title="Surface Enhanced Raman Spectrum of Adenine Before/After Baseline Correction" /></p>
+<p>This method allows us to quickly process large volumes of spectra
+without handling them one by one, making it efficient and robust.</p>
 <p><br/></p>
-<p><strong>Keep on carving!</strong></p>
+<p><strong>Credit:</strong> Dr Tabitha Jones, my colleague who
+supervised me a lot not just this portion, currently is Research
+Associate at University of Cambridge.</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a
+target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/ac034173t">Paul H. C. Eilers, "A
+Perfect Smoother", <em>Anal. Chem.</em> 2003, 75, 14, 3631–3636.</a><a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
                 
               </div>
@@ -418,7 +385,7 @@ Docs</strong></a>.</p>
     
       <span class="category-chain">
         
-  <a href="/categories/Computer/" class="category-chain-item">Computer</a>
+  <a href="/categories/Lab/" class="category-chain-item">Lab</a>
   
   
 
@@ -433,9 +400,9 @@ Docs</strong></a>.</p>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
       
-        <a href="/tags/Markdown/" class="print-no-link">#Markdown</a>
+        <a href="/tags/Spectroscopy/" class="print-no-link">#Spectroscopy</a>
       
     </div>
   
@@ -447,8 +414,8 @@ Docs</strong></a>.</p>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Build Personal Website with Hexo and GitHub Pages on Mac</div>
-      <div>http://zhoudeyue.com/Build-Personal-Websiite-with-Hexo-and-GitHub-Pages-on-Mac/</div>
+      <div>An Automatic Baseline Correction Method for Raman Spectra</div>
+      <div>http://zhoudeyue.com/An-Automatic-Baseline-Correction-Method-for-Raman-Spectra/</div>
     </div>
     <div class="license-meta">
       
@@ -460,7 +427,7 @@ Docs</strong></a>.</p>
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>October 13, 2024</div>
+          <div>October 18, 2024</div>
         </div>
       
       
@@ -492,15 +459,15 @@ Docs</strong></a>.</p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/Best-Speciality-Coffee-Shops-in-London/" title="Best Speciality Coffee Shops in London">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Best Speciality Coffee Shops in London</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/Best-Speciality-Coffee-Shops-in-London/" title="Best Speciality Coffee Shops in London">
+                        <span class="hidden-mobile">Best Speciality Coffee Shops in London</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
@@ -554,6 +521,12 @@ Docs</strong></a>.</p>
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -746,6 +719,49 @@ Docs</strong></a>.</p>
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
